@@ -1,0 +1,32 @@
+{{!< default}}
+{{#tag}}
+<header class="header-2 skew-separator">
+  <div class="page-header">
+    <div class="page-header-image"
+      style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset "img/p8.svg"}}{{/if}})"></div>
+    <div class="container pt-300">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h2 class="display-2">{{name}}</h2>
+          <h4>{{plural ../pagination.total empty=(t "No posts") 
+				singular=(t "1 post") plural=(t "% posts")}}</h4>
+        </div>
+      </div>
+      {{#if description}}
+      <div class="row">
+        <div class="floating-box bg-default w-100">
+          <div class="box text-center">
+            <div class="icon icon-shape bg-success icon-xl rounded-circle text-white">
+              <i class="ni ni-spaceship"></i>
+            </div>
+          </div>
+          <h2 class="lead text-white p-5">{{description}}</h2>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</header>
+{{/tag}}
+{{>loop}}
+{{>pagination}}

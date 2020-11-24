@@ -1,0 +1,36 @@
+<div class="carousel-item {{#if @first}}active{{/if}}">
+  <div class="info text-left bg-info shadow-lg">
+    <div class="row">
+      <div class="icon icon-shape bg-white text-info shadow rounded-circle mb-4">
+        <i class="fa fa-quote-right"></i>
+      </div>
+      <h5
+        style="margin-left: 15px; margin-top: 8px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 250px;">
+        {{title}}</h5>
+    </div>
+    <p class="description text-white">
+      {{excerpt words="32"}}
+    </p>
+    {{#if authors}}
+    <div class="row">
+      {{#foreach authors limit="2"}}
+      <div class="author">
+        <img src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "img/avatar.png"}}{{/if}}" alt="..."
+          class="avatar img-raised">
+        <span>{{name}}</span>
+      </div>
+      {{/foreach}}
+    </div>
+    {{/if}}
+  </div>
+  <div class="card card-blog card-background ml-0" data-animation="true">
+    <div class="full-background" style="background-image: url({{feature_image}})"></div>
+    <div class="card-body">
+      <div class="content-bottom ml-auto">
+        <a href="{{url}}" class="btn btn-round btn-simple btn-neutral"><i class="ni ni-book-bookmark"></i>
+          {{t "Read more"}}</a>
+      </div>
+    </div>
+  </div>
+  </a>
+</div>

@@ -1,0 +1,13 @@
+routes:
+  /subscribe/: members/subscribe
+  /signup/: members/signup
+  /signin/: members/signin
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /kata/{slug}/
+  author: /sensei/{slug}/

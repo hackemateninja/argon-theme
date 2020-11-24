@@ -1,0 +1,82 @@
+{{!< default}}
+<div class="page-header" style="min-height: 48vh !important;">
+  <img class="bg-image" src="{{asset "img/header_authors.png"}}" alt="">
+</div>
+{{#get "authors" limit="all" include="count.posts" order="count.posts desc"}}
+<div class="team-2" style="padding-top: 0px !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-5">
+        <h3 class="display-3">{{t "The Executive Team"}}</h3>
+        <h4 class="lead">This is the paragraph where you can write more details about your team. Keep you user engaged
+          by providing meaningful information.</h4>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      {{#foreach authors}}
+      <div class="col-lg-4 col-md-6">
+        <div class="card card-profile" data-image="profile-image">
+          <div class="card-header">
+            <div class="card-image">
+              <a href="{{url}}">
+                <img class="img rounded" src="{{profile_image}}">
+              </a>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <a href="{{url}}">
+              <h4 class="display-4 mb-0">{{name}}</h4>
+            </a>
+            {{#if website}}
+            <a href="{{website}}">
+              <p class="lead">{{website}}</p>
+            </a>
+            {{/if}}
+            <div class="py-2">
+              <div class="d-flex align-items-center">
+                <div style="color: #8965e0;">
+                  <div class="badge badge-circle mr-3">
+                    <i class="fa fa-map-marker" style="font-size: 16px;"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-1">{{#if location}}{{location}}{{else}}{{t "Not available"}}{{/if}}</h6>
+                </div>
+              </div>
+            </div>
+            <div class="py-2">
+              <div class="d-flex align-items-center">
+                <div style="color: #3b5999;">
+                  <div class="badge badge-circle mr-3">
+                    <i class="fab fa-facebook-square" style="font-size: 16px;"></i>
+                  </div>
+                </div>
+                <div>
+                  <a href="{{#if facebook}}{{facebook_url}}{{else}}#{{/if}}">
+                    <h6 class="mb-1">{{#if facebook}}{{facebook}}{{else}}{{t "Not available"}}{{/if}}</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="py-2">
+              <div class="d-flex align-items-center">
+                <div style="color: #1da1f2;">
+                  <div class="badge badge-circle mr-3">
+                    <i class="fab fa-twitter" style="font-size: 16px;"></i>
+                  </div>
+                </div>
+                <div>
+                  <a href="{{#if twitter}}{{twitter_url}}{{else}}#{{/if}}">
+                    <h6 class="mb-1">{{#if twitter}}{{twitter}}{{else}}{{t "Not available"}}{{/if}}</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/foreach}}
+    </div>
+  </div>
+</div>
+{{/get}}

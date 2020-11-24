@@ -1,0 +1,29 @@
+<div class="col-md-4">
+        <div class="card card-pricing bg-info card-background"
+          style="background-image: url('{{asset "img/pricing_bg.svg"}}" data-background="image">
+          <div class="card-body">
+            <h6 class="card-category text-white text-uppercase">{{t "Free"}}</h6>
+            <h1 class="card-title">
+              <small class="text-white">{{@price.currency_symbol}}</small>0
+            </h1>
+            {{!-- Here you can add your feature list --}}
+            <ul>
+              <li>
+                <b>10</b> Projects
+              </li>
+              <li>
+                <b>1</b> Team Members
+              </li>
+              <li>
+                <b>5</b> Personal Contacts
+              </li>
+              <li>
+                <b>500</b> Messages
+              </li>
+            </ul>
+            <a href="{{@site.url}}/signup/" class="btn btn-white btn-sm mt-3">
+              {{t "Get started"}}
+            </a>
+          </div>
+        </div>
+      </div>

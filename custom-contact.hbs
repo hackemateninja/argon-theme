@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {{@site.title}} - {{meta_title}}
+  </title>
+  <!--     Fonts and icons     -->
+  {{>services/fonts}}
+  <!-- Nucleo Icons -->
+  <link href="{{asset "css/nucleo-icons.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="{{asset "css/font-awesome.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  {{!-- {{>services/google_fonts}} --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/argon-design-system.css"}}">
+  {{ghost_head}}
+</head>
+
+<body>
+  <!-- Navbar -->
+  {{>navbar}}
+  <!-- End Navbar -->
+  <div class="contactus-3">
+    <div class="page-header">
+      <img class="bg-image" src="{{asset "img/bg_contactus3.svg"}}" alt="">
+    </div>
+    {{!-- <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-12 text-center mb-5">
+          <h1 class="display-1">Got a question?</h1>
+          <h3 class="lead">We'd like to talk more about what you need</h3>
+          <button class="btn btn-icon btn-primary mt-3" type="button"
+            href="#contact-form">
+            <span class="btn-inner--icon"><i class="ni ni-chat-round"></i></span>
+            <span class="btn-inner--text">Chat with us</span>
+          </button>
+        </div>
+      </div> --}}
+      <!--More information regarding your business
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="info info-hover">
+            <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
+              <i class="ni ni-square-pin"></i>
+            </div>
+            <h4 class="info-title">Address</h4>
+            <p class="description px-0">12124 First Street, nr 54</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="info info-hover">
+            <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
+              <i class="ni ni-email-83"></i>
+            </div>
+            <h4 class="info-title">Email</h4>
+            <p class="description px-0">hello@email.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="info info-hover">
+            <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
+              <i class="ni ni-mobile-button"></i>
+            </div>
+            <h4 class="info-title">Phone</h4>
+            <p class="description px-0">+1(424) 535 3523</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="info info-hover">
+            <div class="icon icon-shape icon-shape-primary icon-lg shadow rounded-circle text-primary">
+              <i class="ni ni-circle-08"></i>
+            </div>
+            <h4 class="info-title">Contact</h4>
+            <p class="description px-0">Andrew Samian</p>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+  <div class="main">
+    <div class="container-fluid">
+      <div class="row mt-1 mb-4 pt-1">
+        <div class="col-md-8 ml-auto mr-auto text-center mt-5">
+          <h1 class="title">{{t "Tell us more about"}} <b>{{t "yourself"}}</b></h1>
+          <h4 class="desc">{{t "Whether you have questions or you would just like to say hello, contact us."}}</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto ">
+          <form role="form" class="card bg-secondary p-3" id="contact-form" method="POST"
+            action={{>services/formspree}}>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>{{t "Name"}}</label>
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                      </div>
+                      <input type="text" class="form-control" required placeholder="{{t "Name"}}..."
+                        aria-label="Name...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>{{t "Email address"}}</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input type="text" required class="form-control" placeholder="{{t "Email Here"}}...">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>{{t "Your message"}}</label>
+                <textarea name="message" required class="form-control form-control-alternative" id="message"
+                  rows="6"></textarea>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div class="pr-2">
+                  <button type="submit" class="btn btn-primary">{{t "Send Message"}}</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>small_footer}}
+  {{ghost_foot}}
+</body>
+
+</html>

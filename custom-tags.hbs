@@ -1,0 +1,79 @@
+{{!< default}}
+{{#post}}
+<header class="header-2 skew-separator">
+  <div class="page-header">
+    <div class="page-header-image"
+      style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset "img/p8.svg"}}{{/if}})"></div>
+    <div class="container pt-300">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h2 class="display-2">{{title}}</h2>
+        </div>
+      </div>
+      {{#if excerpt}}
+      <div class="row">
+        <div class="floating-box bg-default w-100">
+          <div class="box text-center">
+            <div class="icon icon-shape bg-success icon-xl rounded-circle text-white">
+              <i class="ni ni-spaceship"></i>
+            </div>
+          </div>
+          <h2 class="lead text-white p-5">{{excerpt words="44"}}</h2>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</header>
+{{#get "tags" limit="all" include="count.posts" order="cont.posts desc"}}
+<div class="container">
+  <div class="team-2 pt-0">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-5">
+        <h4 class="lead">{{t "Our most used tags:"}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {{#foreach tags to="3"}}
+    <div class="col-md-4">
+      <div class="card bg-gradient-danger">
+        <div class="card-body pb-0">
+          <h6 class="category-social text-white text-uppercase">
+            <i class="fa fa-fire"></i> {{name}}
+          </h6>
+          {{#if description}}
+          <p class="text-white my-0"
+            style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 8;-webkit-box-orient: vertical;">
+            {{description}}
+          </p>
+          {{/if}}
+        </div>
+        <a href="{{url}}">
+          <img class="img pattern rounded"
+            src="{{#if feature_image}}{{feature_image}}{{else}}{{asset "img/p51.svg"}}{{/if}}" />
+        </a>
+      </div>
+    </div>
+    {{/foreach}}
+  </div>
+  <h4 class="h5 font-weight-bold mb-5 mt-5">{{t "Other cool tags:"}}</h3>
+    {{#foreach tags columns="3" from="4"}}
+    {{#if @rowStart}}<div class="row align-items-center">{{/if}}
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-blog card-background" data-animation="zooming">
+          <div class="full-background" style="background-image: url({{feature_image}}"></div>
+          <a href="{{url}}">
+            <div class="card-body">
+              <div class="content-bottom">
+                <h5 class="card-title">{{name}}</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {{#if @rowEnd}}</div>{{/if}}
+    {{/foreach}}
+</div>
+{{/get}}
+{{/post}}

@@ -1,0 +1,26 @@
+<div class="social-line social-line-big-icons overflow-hidden">
+  <div class="row">
+    {{#prev_post}}
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-md-4 mb-lg-0">
+      <a href="{{url}}" class="btn btn-gradient-default btn-footer" style="height: 176px">
+        {{#if feature_image}}
+        <div class="prev-next-image" style="background-image: url({{feature_image}})"></div>
+        {{/if}}
+        <p class="subtitle text-left font-weight-bold">{{t "Previous Post"}}</p>
+        <p class="title text-left">{{title}}</p>
+      </a>
+    </div>
+    {{/prev_post}}
+    {{#next_post}}
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-md-4 mb-lg-0">
+      <a href="{{url}}" class="btn btn-gradient-primary btn-footer" style="height: 176px">
+        {{#if feature_image}}
+        <div class="prev-next-image" style="background-image: url({{feature_image}});"></div>
+        {{/if}}
+        <p class="subtitle text-right font-weight-bold">{{t "Next Post"}}</p>
+        <p class="title text-right">{{title}}</p>
+      </a>
+    </div>
+    {{/next_post}}
+  </div>
+</div>

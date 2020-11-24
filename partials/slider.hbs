@@ -1,0 +1,29 @@
+{{#get "posts" filter="featured:true" include="tags,authors" as |slider-posts|}}
+{{#if posts}}
+<div class="testimonials-2">
+  <div class="container">
+    <div class="row">
+      <div id="carouselFade" class="carousel slide carousel-testimonials carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          {{!-- {{#get "posts" filter="featured:true" as |slider-posts|}} --}}
+          {{#foreach slider-posts visibility="all"}}
+          {{>posts}}
+          {{/foreach}}
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+        <i class="ni ni-bold-left"></i>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+        <i class="ni ni-bold-right"></i>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    {{!-- {{/get}} --}}
+  </div>
+</div>
+{{/if}}
+{{/get}}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {{@site.title}} - {{t "Sign up"}}
+  </title>
+  <!--     Fonts and icons     -->
+  {{>services/fonts}}
+  <!-- Nucleo Icons -->
+  <link href="{{asset "css/nucleo-icons.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="{{asset "css/font-awesome.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  {{!-- {{>services/google_fonts}} --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/argon-design-system.css"}}">
+  {{ghost_head}}
+</head>
+
+<body class="register-page">
+  <!-- Navbar -->
+  {{>navbar}}
+  <!-- End Navbar -->
+  <div class="wrapper">
+    <div class="page-header bg-default">
+      <div class="page-header-image" style="background-image: url({{asset 'img/register_bg.png'}});"></div>
+      <div class="container right-panel-active" id="container">
+        <div class="form-container sign-up-container">
+          <form data-members-form="signup" class="subscribe-form">
+            <h2>Create Account</h2>
+            <span class="text-default mb-5">use your email for registration</span>
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                </div>
+                <input data-members-email class="form-control" placeholder="Email" type="email" required="true" />
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">{{t "Sign up"}}</button>
+          </form>
+          {{>members_subscribe_alerts}}
+          <div class="subscribe-success">
+            <h3>{{t "Great!"}}</h3>
+            {{t "Check your inbox and click the link to confirm your signup"}}
+            <br>
+            <a href="{{@site.url}}" class="global-button">{{t "Back to Homepage"}}</a>
+          </div>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1 class="text-white">{{t "Welcome Back!"}}</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="btn btn-neutral btn-sm" id="signIn"
+                onClick="window.location.href='/signin'">{{t "Sign in"}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>small_footer}}
+  </div>
+  {{ghost_foot}}
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "argon-ghost-pro",
+  "description": "Argon Ghost PRO",
+  "demo": "https://argon-ghost-pro.creative-tim.com/",
+  "version": "1.0.0",
+  "engines": {
+      "ghost": ">=3.0.0",
+      "ghost-api": "v3"
+  },
+  "license": "MIT",
+  "author": {
+      "name": "Creative Tim",
+      "email": "hello@creative-tim.com",
+      "url": "https://creative-tim.com"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine",
+      "Blog"
+    ]
+  },
+  "keywords": [
+    "Argon Ghost",
+    "argon ghost pro",
+    "argon-ghost-theme",
+    "ghost-theme",
+    "ghost"
+  ],
+  "config": {
+      "posts_per_page": 6
+  }
+}

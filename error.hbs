@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {{@site.title}} - {{statusCode}}
+  </title>
+  <!--     Fonts and icons     -->
+  {{>services/fonts}}
+  <!-- Nucleo Icons -->
+  <link href="{{asset "css/nucleo-icons.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="{{asset "css/font-awesome.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  {{!-- {{>services/google_fonts}} --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/argon-design-system.css"}}">
+  {{ghost_head}}
+</head>
+
+<body class="error-page">
+  <!-- Navbar -->
+  {{>navbar}}
+  <!-- End Navbar -->
+  <div class="wrapper">
+    <div class="page-header error-page">
+      <div class="page-header-image" style="background-image: url({{asset 'img/404.svg'}});"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="title">{{statusCode}}</h1>
+            <p class="lead">{{message}}</p>
+            <a class="btn btn-icon btn-primary mt-4" href="{{@site.url}}">
+              <span class="btn-inner--icon"><i class="ni ni-bold-left"></i></span>
+              <span class="btn-inner--text">{{t "Back to Homepage"}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ghost_foot}}
+</body>
+
+</html>

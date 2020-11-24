@@ -1,0 +1,41 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row row-grid align-items-center mb-5">
+      <div class="col-lg-8">
+        <h3 class="text-primary font-weight-light mb-2">{{t "Thank you for supporting us!"}}</h3>
+        <h4 class="mb-0 font-weight-light">{{t "Let's get in touch on any of these platforms."}}</h4>
+      </div>
+      <div class="col-lg-4 text-lg-right btn-wrapper pr-4">
+        {{#if @site.twitter}}
+        <a target="_blank" href="{{twitter_url}}" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle"
+          data-toggle="tooltip" data-original-title="Follow us" role="button">
+          <span class="btn-inner--icon"><i class="fab fa-twitter"></i></span>
+        </a>
+        {{/if}}
+        {{#if @site.facebook}}
+        <a target="_blank" href="{{facebook_url}}" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook"
+          data-toggle="tooltip" data-original-title="Like us" role="button">
+          <span class="btn-inner--icon"><i class="fab fa-facebook-square"></i></span>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-8">
+        <div class="copyright">
+          &copy; 2020 <a href="{{@site.url}}">{{@site.title}}</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <ul class="nav nav-footer justify-content-end">
+          {{#foreach navigation from="1" to="4"}}
+          <li class="nav-item">
+            <a href={{url absolute="true"}} class="nav-link">{{label}}</a>
+          </li>
+          {{/foreach}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

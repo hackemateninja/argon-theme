@@ -1,0 +1,53 @@
+<div class="d-flex flex-column justify-content-center">
+  <div class="row justify-content-center mb-3">
+    {{#has author="count:>1"}}
+    <p class="lead">{{t "This post was a collaboration between:"}}</p>
+    {{else}}
+    <p class="lead">{{t "Read more posts by this author"}}</p>
+    {{/has}}
+  </div>
+  <div class="d-flex justify-content-center flex-wrap">
+    {{#foreach authors}}
+    <div class="col-md-4 mx-auto">
+      <div class="card card-profile" data-image="img-rounded">
+        <div class="card-avatar">
+          <a href="{{url}}">
+            <img class="img" src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "img/avatar.png"}}{{/if}}">
+          </a>
+        </div>
+        <div class="card-body ">
+          <a href="{{url}}">
+            <h4 class="card-title">{{name}}</h4>
+          </a>
+          {{#if bio}}
+          <p class="card-description text-wrap text-truncate text-break pt-2" style="height: 115px;">
+            {{bio}}
+          </p>
+          {{/if}}
+          <div class="d-flex align-content-center justify-content-between">
+            {{#if website}}
+            <a href="{{website}}" class="btn btn-info btn-round btn-sm">website</a>
+            {{/if}}
+            <div class="d-flex justify-content-between">
+              <div class="btn-wrapper profile text-left">
+                {{#if twitter}}
+                <a target="_blank" href="https://twitter.com/{{twitter}}" class="btn btn-twitter btn-sm"
+                  data-toggle="tooltip" data-original-title="Follow us">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                {{/if}}
+                {{#if facebook}}
+                <a target="_blank" href="https://facebook.com/{{facebook}}" class="btn btn-facebook btn-sm"
+                  data-toggle="tooltip" data-original-title="Like us">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/foreach}}
+  </div>
+</div>

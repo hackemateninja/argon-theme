@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title page=(t "meta-page")}}</title>
+  <!--     Fonts and icons     -->
+  {{>services/fonts}}
+  <!-- Nucleo Icons -->
+  <link href="{{asset "css/nucleo-icons.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="{{asset "css/font-awesome.css"}}" rel="stylesheet" />
+  <link href="{{asset "css/nucleo-svg.css"}}" rel="stylesheet" />
+  {{!-- {{>services/google_fonts}} --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/argon-design-system.css"}}">
+  {{!-- Ajax Load More required variables --}}
+  <script>
+    var pagination_next_page_number = '{{ pagination.next }}',
+      pagination_available_pages_number = '{{ pagination.pages }}';
+  </script>
+  {{ghost_head}}
+</head>
+
+<body>
+  {{>navbar}}
+  {{#is "home"}}
+  {{>header}}
+  {{/is}}
+  {{{body}}}
+  {{>footer}}
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+  {{ghost_foot}}
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  {{!-- The load-more JavaScript file for Argon Ghost Pro --}}
+  <script type="text/javascript" src="{{asset "js/infinite-scroll.js"}}"></script>
+</body>
+
+</html>

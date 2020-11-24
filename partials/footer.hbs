@@ -1,0 +1,87 @@
+<div class="section section-shaped no-tilt">
+  <div class="shape shape-style-1 shape-default">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  {{#if @labs.members}}
+  {{^if @member}}
+  <div class="subscribe-line">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-10 ml-auto mr-auto">
+          <div class="text-center">
+            <h4 class="title text-white">{{t "Subscribe to our Newsletter"}}</h4>
+            <p class="description text-white">
+              {{t "Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this."}}
+            </p>
+          </div>
+          <form class="mt-4 subscribe-form" data-members-form="subscribe">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input data-members-email class="form-control" placeholder="{{t "Your email address"}}" type="email"
+                      name="email" aria-label="{{t "Your email address"}}" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-info btn-block">{{t "Subscribe"}}</button>
+              </div>
+            </div>
+            {{>members_subscribe_alerts}}
+            <div class="subscribe-success">
+              <h4>{{t "Great!"}}</h3>
+                {{t "Check your inbox and click the link to confirm your subscription"}}
+                <br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{/if}}
+  <footer class="footer bg-transparent">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="align-self-center">
+          <span class="text-white">&copy; {{@site.title}}</span>
+        </div>
+        {{#if @site.secondary_navigation}}
+        {{navigation type="secondary"}}
+        {{else}}
+        <ul class="nav justify-content-center align-self-center flex-wrap">
+          {{#foreach navigation from="1" to="4"}}
+          <li class="nav-item">
+            <a href="{{url absolute="true"}}" class="nav-link" role="button">
+              <span class="text-white">{{label}}</span>
+            </a>
+          </li>
+          {{/foreach}}
+        </ul>
+        {{/if}}
+        <div class="column">
+          <h4>Follow us:</h4>
+          <div class="btn-wrapper profile text-center">
+            <a target="_blank" href="{{twitter_url}}" class="btn btn-twitter btn-sm" data-toggle="tooltip"
+              data-original-title="Follow us">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="{{facebook_url}}" class="btn btn-facebook btn-sm" data-toggle="tooltip"
+              data-original-title="Like us">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

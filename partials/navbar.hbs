@@ -1,0 +1,30 @@
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg bg-default navbar-dark {{#is "signin, signup"}}bg-transparent{{/is}} headroom">
+  <div class="container">
+    <a class="navbar-brand mr-lg-5" href="{{@site.url}}">
+      <img src="{{@site.logo}}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+      aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="{{@site.url}}">
+              <img src="{{@site.logo}}">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+              aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      {{navigation}}
+    </div>
+  </div>
+</nav>

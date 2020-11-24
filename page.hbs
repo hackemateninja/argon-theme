@@ -1,0 +1,44 @@
+{{!< default}}
+{{#post}}
+{{>posts}}
+<header class="header-2 skew-separator">
+  <div class="page-header">
+    <div class="page-header-image" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset "img/p8.svg"}}{{/if}})"></div>
+    <div class="container pt-300">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h2 class="display-2">{{title}}</h2>
+        </div>
+      </div>
+      {{#if excerpt}}
+      <div class="row">
+        <div class="floating-box bg-default w-100">
+          <div class="box text-center">
+            <div class="icon icon-shape bg-success icon-xl rounded-circle text-white">
+              <i class="ni ni-spaceship"></i>
+            </div>
+          </div>
+          <h2 class="lead text-white p-5">
+            {{excerpt words="44"}}
+          </h2>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</header>
+<section class="section pb-3">
+  <div class="container">
+    <div class="row">
+      {{#if access}}
+      <div class="col-md-8 ml-auto mr-auto" style="display: flex; flex-direction: column;">
+        <h3 class="title">{{title}}</h3>
+        {{content}}
+      </div>
+    </div>
+    {{else}}
+    {{>members_cta}}
+    {{/if}}
+  </div>
+</section>
+{{/post}}

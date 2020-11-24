@@ -1,0 +1,34 @@
+{{^has visibility="public"}}
+<div class="members-cta-blur">
+  <p aria-hidden="true">This post is for subscribers only. You don't have access to this post on {{@site.title}} at the
+    moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the
+    archive! Subscribing only takes a few seconds and will give you immediate access. By opting for a membership you'll
+    have lots of benefits like being able to follow all new posts faster than most of the people and lots and lots of
+    new features that we've prepared for you, our dear readers.</p>
+</div>
+{{/has}}
+{{#has visibility="paid"}}
+<div class="modal fade show" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+  aria-hidden="false" style="display: block;">
+  <div class="modal-dialog modal-danger modal- mb-5" role="document">
+    <div class="modal-content bg-gradient-danger">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-title-notification">{{t "Pay for content."}}</h6>
+      </div>
+      <div class="modal-body">
+        <div class="py-3 text-center">
+          <i class="ni ni-bell-55 ni-3x"></i>
+          <h4 class="heading mt-4">{{t "This post is for paying subscribers only"}}</h4>
+          <p>
+            {{t "Sign up now and upgrade your account to read the post and get access to the full library of posts for paying subscribers only."}}
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" onclick="window.location.href='/signup'">{{t "Sign up now"}}</button>
+        <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" onclick="window.location.href='/signin'">{{t "Sign in"}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/has}}

@@ -1,0 +1,40 @@
+<div class="col-lg-4 post">
+  <a href="{{url}}">
+    <div class="card card-blog card-background" data-animation="zooming">
+      <div class="full-background" style="background-image: url({{feature_image}}"></div>
+      <div class="card-body">
+        <div class="content-bottom" style="padding-right: 10px;">
+          {{#has author="count:1"}}
+          {{#primary_author}}
+          <h6 class="card-category text-white opacity-8">
+            {{{name}}}
+          </h6>
+          {{/primary_author}}
+          {{else}}
+          {{#has author="count:2"}}
+          <h6 class="card-category text-white opacity-8">
+            {{authors autolink="false" separator=" <span>&</span> "}}
+          </h6>
+          {{else}}
+          {{#has author="count:>2"}}
+          {{#primary_author}}
+          <h6 class="card-category text-white opacity-8">
+            {{{name}}} <span>{{t "and others"}}</span>
+          </h6>
+          {{/primary_author}}
+          {{/has}}
+          {{/has}}
+          {{/has}}
+          <h4 class="card-title">{{title}}</h4>
+        </div>
+        {{#if @labs.members}}
+        {{#has visibility="paid"}}
+        <div class="badge-position">
+          <span class="badge badge-pill badge-sm badge-warning">Premium</span>
+        </div>
+        {{/has}}
+        {{/if}}
+      </div>
+    </div>
+  </a>
+</div>

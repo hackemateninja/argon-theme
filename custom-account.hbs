@@ -1,0 +1,130 @@
+{{!< default}}
+{{#post}}
+{{#if @member.paid}}
+<div class="membership-account membership-header section-profile{{#if feature_image}} is-cover{{/if}}">
+  <div class="membership-profile profile-wrap{{#if feature_image}} is-cover"
+    style="background-image: url({{feature_image}}){{/if}}">
+    <h1 class="membership-name">
+      {{#if @member.name}}
+      {{@member.name}}
+      {{else}}
+      {{t "Your account"}}
+      {{/if}}
+    </h1>
+    <h2>{{t "Nice, you're a paying subscriber!"}}</h2>
+    {{#if custom_excerpt}}
+    <p class="membership-excerpt">{{{custom_excerpt}}}</p>
+    {{/if}}
+    <p class="membership-excerpt">
+      {{t "You've an active account with access to all areas. You're all set, but if you need any help, get in touch with us and we'd be happy to help."}}
+    </p>
+    {{#foreach @member.subscriptions}}
+    <div class="membership-details">
+      <div class="membership-details-wrap flex">
+        <div class="membership-details-content">
+          <div class="membership-detail">
+            <label>{{t "Email address"}}</label>
+            <span>{{@member.email}}</span>
+          </div>
+          <div class="membership-detail">
+            <label>{{t "Your plan"}}</label>
+            <span>{{plan.nickname}} — {{plan.currency_symbol}}{{price plan.amount}}/{{plan.interval}}</span>
+          </div>
+        </div>
+        <div class="membership-details-content">
+          <div class="membership-detail">
+            <label>{{t "Card"}}</label>
+            <span>**** **** **** {{default_payment_card_last4}}</span>
+          </div>
+          <div class="membership-detail">
+            <label>
+              {{#if cancel_at_period_end}}
+              {{t "Expires"}}
+              {{else}}
+              {{t "Next bill date"}}
+              {{/if}}
+            </label>
+            <span>{{date current_period_end format="DD MMM YYYY"}}</span>
+          </div>
+        </div>
+        <div class="membership-cancel">
+          <a href="#" class="membership-detail-button global-button"
+            data-members-edit-billing>{{t "Edit billing info"}}</a>
+          {{cancel_link class="membership-detail-button global-button" errorClass="membership-cancel-error" cancelLabel=(t "Cancel subscription") continueLabel=(t "Continue subscription")}}
+          {{#if cancel_at_period_end}}
+          <small>
+            <strong>{{t "Your subscription will expire on"}} —
+              {{date current_period_end format="DD MMMM YYYY"}}.</strong>
+            {{t "If you change your mind in the meantime you can turn auto-renew back on to continue your subscription."}}
+          </small>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    {{/foreach}}
+    {{#get "posts" limit="1" filter="visibility:paid" include="authors,tags" as |paid-posts|}}
+    {{#if paid-posts}}
+    <span class="membership-small-info">{{t "The latest posts only for paying subscribers"}}</span>
+    {{/if}}
+    {{/get}}
+  </div>
+</div>
+{{#get "posts" limit="5" filter="visibility:paid" include="authors,tags" as |paid-posts|}}
+{{#if paid-posts}}
+<div id="loop" class="membership-loop section-loop wrap">
+  <div class="items-wrap flex">
+    {{#foreach paid-posts visibility="paid"}}
+    {{>loop_item}}
+    {{/foreach}}
+  </div>
+</div>
+{{else}}
+<div class="membership-footer-margin"></div>
+{{/if}}
+{{/get}}
+{{else if @member}}
+<div class="team-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-5">
+        <h3 class="display-3">
+          {{#if @member.name}}
+          {{@member.name}}
+          {{else}}
+          {{t "Your account"}}
+          {{/if}}
+        </h3>
+        <h4 class="lead">{{t "Currently, you're not a paying subscriber."}}</h2>
+          {{#if custom_excerpt}}
+          <p>{{{custom_excerpt}}}</p>
+          {{/if}}
+          <p>
+            {{t "You've an active account with access to posts for subscribers only. Upgrade your account and get access to the full library of posts."}}
+          </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <div class="row">
+          <div class="col-md-6 text-center mb-2">
+            <p>{{t "Email address"}}</p>
+            <p>{{@member.email}}</p>
+          </div>
+          <div class="col-md-6 text-center mb-2">
+            <p>{{t "Your plan"}}</p>
+            <p>{{t "Free"}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 mx-auto text-center mb-5">
+      <span class="membership-small-info">{{t "More posts? Choose your plan"}}</span>
+    </div>
+    <div class="d-flex justify-content-center">
+        {{>members_plan_monthly}}
+        {{>members_plan_yearly}}
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/post}}
