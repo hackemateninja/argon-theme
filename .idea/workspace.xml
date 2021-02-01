@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c05806c-8fb3-4af3-9d60-d62633665d68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-account.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-account.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-free.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-free.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-pro.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-pro.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-tags.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-tags.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/footer.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606208008471</updated>
       <workItem from="1606208010017" duration="7106000" />
-      <workItem from="1612188768525" duration="5398000" />
+      <workItem from="1612188768525" duration="5769000" />
     </task>
     <servers />
   </component>
