@@ -54,22 +54,22 @@
     {{/foreach}}
   </div>
   <h4 class="h5 font-weight-bold mb-5 mt-5">Other cool Lessons</h4>
-    {{#foreach posts columns="3" from="4"}}
-    <div class="row align-items-center">
-      <div class="col-md-6 col-lg-4">
-        <div class="card card-blog card-background" data-animation="zooming">
-          <div class="full-background" style="background-image: url({{feature_image}}"></div>
-          <a href="{{url}}">
-            <div class="card-body">
-              <div class="content-bottom">
-                <h5 class="card-title">{{title}}</h5>
-              </div>
+    <div class="row">
+        {{#foreach posts columns="3" from="4"}}
+            <div class="col-md-4">
+                <div class="card card-blog card-background" data-animation="zooming">
+                    <div class="full-background" style="background-image: url({{feature_image}}"></div>
+                    <a href="{{url}}">
+                        <div class="card-body">
+                            <div class="content-bottom">
+                                <h5 class="card-title">{{title}}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </a>
-        </div>
-      </div>
+        {{/foreach}}
     </div>
-    {{/foreach}}
 </div>
 {{/get}}
 {{/post}}

@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/custom-free.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-free.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-pro.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-pro.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-tags.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-tags.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/members_cta.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/members_cta.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606208008471</updated>
       <workItem from="1606208010017" duration="7106000" />
-      <workItem from="1612188768525" duration="7034000" />
+      <workItem from="1612188768525" duration="7413000" />
     </task>
     <servers />
   </component>
