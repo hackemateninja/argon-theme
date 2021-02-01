@@ -32,7 +32,7 @@
   <div class="team-2 pt-0">
     <div class="row">
       <div class="col-md-8 mx-auto text-center mb-5">
-        <h4 class="lead">{{t "Our most used Katas:"}}</h4>
+        <h4 class="lead">Our most used Lessons</h4>
       </div>
     </div>
   </div>
@@ -44,12 +44,6 @@
           <h6 class="category-social text-white text-uppercase">
             <i class="fa fa-fire"></i> {{name}}
           </h6>
-          {{#if description}}
-          <p class="text-white my-0"
-            style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 8;-webkit-box-orient: vertical;">
-            {{description}}
-          </p>
-          {{/if}}
         </div>
         <a href="{{url}}">
           <img class="img pattern rounded"
@@ -59,7 +53,7 @@
     </div>
     {{/foreach}}
   </div>
-  <h4 class="h5 font-weight-bold mb-5 mt-5">{{t "Other cool katas:"}}</h3>
+  <h4 class="h5 font-weight-bold mb-5 mt-5">Other cool Lessons</h4>
     {{#foreach posts columns="3" from="4"}}
     {{#if @rowStart}}<div class="row align-items-center">{{/if}}
       <div class="col-md-6 col-lg-4">
