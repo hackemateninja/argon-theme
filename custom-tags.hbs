@@ -59,7 +59,7 @@
   </div>
   <h4 class="h5 font-weight-bold mb-5 mt-5">{{t "Other cool katas:"}}</h4>
     {{#foreach tags columns="3" from="4"}}
-    {{#if @rowStart}}<div class="row align-items-center">{{/if}}
+    <div class="row align-items-center">
       <div class="col-md-6 col-lg-4">
         <div class="card card-blog card-background" data-animation="zooming">
           <div class="full-background" style="background-image: url({{feature_image}}"></div>
@@ -72,7 +72,7 @@
           </a>
         </div>
       </div>
-      {{#if @rowEnd}}</div>{{/if}}
+    </div>
     {{/foreach}}
 </div>
 {{/get}}
