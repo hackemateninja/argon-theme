@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c05806c-8fb3-4af3-9d60-d62633665d68" name="Default Changelist" comment="" />
+    <list default="true" id="7c05806c-8fb3-4af3-9d60-d62633665d68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-contact.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-contact.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-tags.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/custom-tags.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/footer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/members_login_panel.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/members_login_panel.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/services/formspree.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/services/formspree.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/post.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kjJKrbb0a7K4TYqFjS4KZoel6Y" />
   <component name="ProjectViewState">
@@ -14,6 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -27,17 +40,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606208008471</updated>
-      <workItem from="1606208010017" duration="5168000" />
+      <workItem from="1606208010017" duration="7106000" />
+      <workItem from="1612188768525" duration="1061000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="534" y="213" key="#Web_Browsers" timestamp="1606208053612">
-      <screen x="0" y="23" width="1680" height="974" />
-    </state>
-    <state x="534" y="213" key="#Web_Browsers/0.23.1680.974@0.23.1680.974" timestamp="1606208053612" />
   </component>
 </project>
